@@ -71,42 +71,45 @@
             <div class="log-in">
                 <h2 class="title-main main-log-in">Đăng nhập</h2>
                 <img src="./images/dangnhap/userlogin.png" alt="">
-                <div class="table table-log-in" >
-                    <div>
-                        <tr>
-                            <td> <label for="email"> <i class=" fas fa-envelope-square"></i> </label></td>
-                            <td> <input id="email" type="text" name="email" placeholder="Nhập email"> </td>
-                        </tr>
-                    </div>
-                    <div>
-                        <tr>
-                            <td> <label for="pass">  <i class="fas fa-key"></i> </label></td>
-                            <td> <input id="pass" type="text" name="psw" placeholder="Nhập mật khẩu"> </td>
-                        </tr>
-                    </div>
-                    <div>
+                <form action="" class="form-registration">
+                    <div class="table table-log-in">
 
-                        <tr>
-                            <td></td>
-                            <td> <input type="submit" value="Đăng Nhập">
-                                <input type="reset" value="Hủy">
-                            </td>
-                        </tr>
-                    </div>
-                    <div>
+                        <div>
+                            <tr>
+                                <td> <label for="email"> <i class=" fas fa-envelope-square"></i> </label></td>
+                                <td> <input required id="email" type="text" name="email" placeholder="Nhập email"> </td>
+                            </tr>
+                        </div>
+                        <div>
+                            <tr>
+                                <td> <label for="pass"> <i class="fas fa-key"></i> </label></td>
+                                <td> <input required id="pass" type="text" name="psw" placeholder="Nhập mật khẩu"> </td>
+                            </tr>
+                        </div>
+                        <div>
 
-                        <tr>
-                            <td colspan="2">
-                                <p>
-                                    Bạn quên <a href="#">mật khẩu?</a>
-                                    <input type="checkbox">
-                                    Ghi nhớ cho lần đăng nhập sau.
-                                </p>
-                            </td>
+                            <tr>
+                                <td></td>
+                                <td> <input type="submit" value="Đăng Nhập">
+                                    <input type="reset" value="Hủy">
+                                </td>
+                            </tr>
+                        </div>
+                        <div>
 
-                        </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <p>
+                                        Bạn quên <a href="#">mật khẩu?</a>
+                                        <input type="checkbox">
+                                        Ghi nhớ cho lần đăng nhập sau.
+                                    </p>
+                                </td>
+
+                            </tr>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
         <div class="footer">
@@ -118,8 +121,8 @@
             <a href="#"> <i class="fab fa-pinterest"></i></a>
 
         </div>
-    <a class="scroll-top" href="#"> <img src="./images/top.png" alt=""></a>
-
+        <a class="scroll-top" href="#"> <img src="./images/top.png" alt=""></a>
+        <script src="./javacript/main.js"></script>
 </body>
 
 </html>
