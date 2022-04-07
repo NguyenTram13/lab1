@@ -7,7 +7,7 @@ window.addEventListener("load",function(){
     function handleSearch(e){
         if(inputSearch.value===""){
             e.preventDefault();
-            alert("Ban chua nhap gi het!")
+            alert("Bạn chưa nhập gì hết")
         }
     }
     function formatMoney(num) {
@@ -34,7 +34,7 @@ window.addEventListener("load",function(){
         Pwd=e.target.value;
         if(e.target.value.length<8){
             isPass=false;
-            alert("Mat khau phai lon hon 8 ky tu")
+            alert("Mật khẩu từ 8 ký tự trở lên")
         }
     })
 
@@ -45,13 +45,13 @@ window.addEventListener("load",function(){
         }
         else {
             isRpPwd=false;
-            alert("mat khau nhap lai chua dung")
+            alert("Mật khẩu nhập lại chưa đúng")
         }
     })
     
     inputName?.addEventListener("change", function(e){
         if(e.target.value.length<4){
-            alert("Ho ten hon 4 ky tu");
+            alert("Họ tên từ 4 ký tự trở lên");
             isInputName = false
         }
         else{
@@ -62,7 +62,7 @@ window.addEventListener("load",function(){
 
     inputConmntent?.addEventListener("change", function(e){
         if(e.target.value.length<10){
-            alert("Noi dung phai hon 10 ky tu");
+            alert("Nội dung từ 10 ký tự trở lên");
             isInputContent = false
         }
         else{
@@ -74,11 +74,12 @@ window.addEventListener("load",function(){
         e.preventDefault();
         if(isPass && isRpPwd || (isInputName && isInputContent)){
             this.submit();
-            alert("Gui du lieu thanh cong")
+            alert("Gửi dữ liệu thành công")
             this.reset();
+          
         }
         else{
-
+         
         }
     })
 // SAN PHAM 
@@ -215,7 +216,7 @@ const items = [
             }
             let index=-1;
            if(infoItem.amount<0 || infoItem.amount>100){
-               alert("So luong lon 0 nho hon 100")
+               alert("Số lượng phải lớn hơn 0 và nhỏ hơn 100")
            }
            else{
                if(itemCard.length>0){
@@ -225,14 +226,14 @@ const items = [
                if(index>-1){
                    let newAmount=itemCard[index].amount+infoItem.amount
                    itemCard[index].amount=newAmount;
-                   alert("San pham da co trong gio hang")
+                   alert("Sản phẩm đã có trong giỏ hàng")
                    this.querySelector(".amount").value="0"
                }
                else{
                    if(index<0 || itemCard.length==0){
                        itemCard.push(infoItem)
                         this.querySelector(".amount").value="0"
-                        alert("San pham da them vao gio hang")
+                        alert("Sản phẩm đã thêm vào giỏ hàng")
 
                    }
                }
