@@ -243,7 +243,11 @@ const items = [
         
     }
     for(let i=0 ; i< productListItem.length; i++){
-            productListItem[i].addEventListener("click", addCard)
+            productListItem[i].addEventListener("click", addCard);
+            productListItem[i].addEventListener("click", showCart);
+
+            productListItem[i].addEventListener("click", calcularSumMoney);
+
                 
             
         }
@@ -264,7 +268,6 @@ const items = [
             `
             bodycart?.insertAdjacentHTML('beforeend', template)
         }
-        let sum=0;
         const moneyItem = document.querySelector(".money-sum")
         console.log( moneyItem)
         const moneyCk = document.querySelector(".money-ck")
@@ -276,8 +279,8 @@ const items = [
             if(itemCard.length>0){
                 itemCard.forEach((item, index) => randerCart(item));
                 
+                calcularSumMoney();
             }
-            calcularSumMoney();
         }
         showCart();
         window.onstorage= ()=>{
@@ -302,11 +305,14 @@ const items = [
                 
                 itemCard.splice(index, 1)
                 localStorage.setItem("listItem", JSON.stringify(itemCard));
-
+                calcularSumMoney();
             }
         })
         
         function calcularSumMoney (){
+          itemCard=JSON.parse(localStorage.getItem("listItem")) || [];
+            let sum=0;
+
             if(itemCard.length>0){
                 itemCard.forEach(item=>{
                     sum+=+(item.price)*(item.amount)
