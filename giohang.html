@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title> Giỏ Hàng </title>
+    <link rel="stylesheet" href="main1.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header-logo">
+                <a href="index.html" class="header-logo-img">
+                    <img src="./images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="header-navbar">
+                <div class="header-navbar-left">
+                    <ul class="header-list">
+                        <li class="header-item">
+                            <a href="./index.html" class="header-item-link">Trang Chủ</a>
+
+                        </li>
+                        <li class="header-item">
+                            <a href="./gioithieu.html" class="header-item-link">Giới Thiệu </a>
+
+                        </li>
+                        <li class="header-item">
+                            <a href="./sanpham.html" class="header-item-link">Sản Phẩm</a>
+
+                        </li>
+                        <li class="header-item">
+                            <a href="./tintuc.html" class="header-item-link">Tin Tức</a>
+
+                        </li>
+                        <li class="header-item">
+                            <a href="./dangnhap.html" class="header-item-link">Đăng Nhập</a>
+
+                        </li>
+                        <li class="header-item">
+                            <a href="./dangky.html" class="header-item-link">Đăng Ký</a>
+
+                        </li>
+                        <li class="header-item">
+                            <a href="./lienhe.html" class="header__item-link">Liên Hệ</a>
+
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="header-navbar-right">
+                    <form action="timkiem.html" method="get" class="search-form">
+                        <input  type="text" placeholder="Search...">
+                        <button type="submit"> <i class="fas fa-search"></i> </button>
+
+                    </form>
+                    <a href="giohang.html" class="cart-right"> <i class="fas fa-cart-plus"></i> </a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <h2 class="title-main details">Chi Tiết Đơn Hàng</h2>
+            <table class="cart-order">
+                <thead>
+                    <th>Hinh SP</th>
+                    <th> Ten Sp</th>
+                    <th> Don Gia</th>
+                    <th> Gia</th>
+                    <th> Thanh Tien</th>
+                    <th> Xoa</th>
+                </thead>
+                <tbody class="body-cart">
+                   
+                </tbody>
+                <tfoot>
+                    <div class="buy">
+                      <tr>
+                        <td colspan="6" class="table-text-right">
+                          Tổng thành tiền (A) = <span class="money-sum">0 </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="6" class="table-text-right">
+                          Chiết khấu (B) = 0.1 x A = <span class="money-ck">0</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="6" class="table-text-right">
+                          Thuế (C) = 10% x (A-B) = <span class="money-tax">0</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="6" class="table-text-right">
+                          Tổng đơn hàng = A -B + C = <span class="money-dh">0</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="6" style="text-align: center">
+                          <input type="submit" value="Xác nhận đơn hàng" />
+                        </td>
+                      </tr>
+                    </div>
+                  </tfoot>
+            </table>
+        </div>
+        <div class="footer">
+            <span>
+                © 2021 Bản quyền thuộc về FreeezeVN.
+            </span>
+            <a href="#"> <i class="fab fa-facebook"></i></a>
+            <a href="#"> <i class="fab fa-twitter"></i> </a>
+            <a href="#"> <i class="fab fa-pinterest"></i></a>
+
+        </div>
+    </div>
+    <a class="scroll-top" href="#"> <img src="./images/top.png" alt=""></a>
+   <script src="./javacript/main.js"></script>
+</body>
+
+</html>

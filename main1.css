@@ -21,7 +21,7 @@ html{
     background-image: url("./images/header.png");
     background-repeat: no-repeat;
     width: 100%;
-    height: 100px;
+    height: 130px;
     background-size: 100%;
     /* align-items:flex-end; */
     flex-direction: column;
@@ -31,10 +31,85 @@ html{
     position: fixed; 
     top: 0; 
     left: 0; 
-    display: block;
+    display: flex;
     z-index: 10;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.header-animation{
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
+.animation-img1{
+    animation: animation-img1 1s linear;
+    transition: all 0.25s ease;
+    position: absolute;
+    top:4px;
+    width: 75px;
+    height: 75px;
+    
+    left: 30%;
+}
+.animation-img2{
+    animation: animation-img2 1s linear;
+    transition: all 0.25s ease;
+
+    position: absolute;
+    top:4px;
+    
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    
+}
+.animation-img3{
+    animation: animation-img3 1s linear;
+    transition: all 0.25s ease;
+    
+    position: absolute;
+    top:4px;
+    width: 125px;
+    height: 125px;
+    left: 70%;
+
+    
+    
+}
+.animation-img1 img,
+.animation-img2 img,
+.animation-img3 img {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+@keyframes animation-img1{
+    from{
+        left: 80%;
+    }
+    to{
+        left:30%;
+    }
+}
+@keyframes animation-img2{
+    from{
+        left: 90%;
+    }
+    to{
+        left:50%;
+    }
+}
+@keyframes animation-img3{
+    from{
+        left: 100%;
+    }
+    to{
+        left:70%;
+    }
+}
 .header-logo{
 
 
@@ -317,6 +392,10 @@ html{
     flex-direction: column;
     justify-content: space-between;
 }
+.money{
+    display: flex;
+    justify-content: center;
+}
 /* tin tuc */
 .news-item{
     display: flex;
@@ -418,5 +497,41 @@ html{
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+}
+/* Gio Hang */
+.cart-order{
+    width: 100%;
+    text-align: center;
+    padding: 0 30px;
+}
+.cart-item td:first-child{
+    width: 100px;
+    height: 100px;
+}
+.cart-item img{
+    width: 100%;
+    object-fit: cover;
+}
+.cart-order th,
+.cart-item td{
+    border:#000 solid 1px;
+}
+.details{
+    margin: 30px 0;
+}
+.cart-icon:hover{
+   
+    color:rgb(236, 14, 14);
+    cursor: pointer;
+    padding: 4px;
+    background-color: rgba(255, 0, 0, 0.336);
+    border-radius: 4px;
+}
+.table-text-right{
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    text-align: right;
+    border: 1px solid #ccc;
 
 }
